@@ -1,0 +1,104 @@
+metadata:
+  artifact: "Business AST"
+  version: "0.1.0"
+  status: "draft"
+  owner: "PO Agent"
+  last_updated_by: "PO Agent"
+  description: >
+    Structured business representation of the requested feature.
+    This file is the business source of truth before technical implementation.
+
+feature:
+  id: "FEATURE-001"
+  name: ""
+  summary: ""
+  priority: "medium"
+
+intent:
+  raw_request: ""
+  normalized_intent: ""
+  problem_statement: ""
+  desired_outcome: ""
+
+business_goal:
+  primary_goal: ""
+  success_metrics:
+    - id: "METRIC-001"
+      description: ""
+      target: ""
+
+actors:
+  - id: "ACTOR-001"
+    name: ""
+    type: "user"
+    responsibilities:
+      - ""
+    permissions:
+      - ""
+
+rules:
+  - id: "BR-001"
+    name: ""
+    description: ""
+    priority: "must"
+    rationale: ""
+    examples:
+      valid:
+        - ""
+      invalid:
+        - ""
+
+flows:
+  - id: "FLOW-001"
+    name: ""
+    trigger: ""
+    preconditions:
+      - ""
+    steps:
+      - order: 1
+        actor: ""
+        action: ""
+        expected_result: ""
+    postconditions:
+      - ""
+
+acceptance_criteria:
+  - id: "AC-001"
+    description: ""
+    given: ""
+    when: ""
+    then: ""
+    linked_rules:
+      - "BR-001"
+
+edge_cases:
+  - id: "EDGE-001"
+    description: ""
+    expected_behavior: ""
+    linked_rules:
+      - "BR-001"
+
+out_of_scope:
+  - id: "OOS-001"
+    description: ""
+
+assumptions:
+  - id: "ASM-001"
+    description: ""
+    impact_if_wrong: ""
+
+open_questions:
+  - id: "Q-001"
+    question: ""
+    blocking: false
+    owner: "human"
+
+traceability:
+  source_inputs:
+    - type: "human_prompt"
+      reference: ""
+  linked_artifacts:
+    context_manifest: "specs/context-manifest.yaml"
+    implementation_plan: "specs/implementation-plan.md"
+    tasks: "specs/tasks.md"
+    validation_report: "specs/validation-report.md"

@@ -1,0 +1,125 @@
+---
+description: Use when preparing the feature for PR, deployment, local run, or operational handoff.
+globs:
+  - "README.md"
+  - "docs/**/*"
+  - ".github/**/*"
+  - "Dockerfile"
+  - "docker-compose.yml"
+  - "package.json"
+  - "pom.xml"
+  - "build.gradle"
+  - "Makefile"
+  - "specs/*.md"
+alwaysApply: false
+---
+
+# Operational Flow Rule
+
+You are responsible for the operational handoff of the Local Dark Factory.
+
+This rule applies when preparing a feature for:
+
+- Local demo
+- Pull request
+- Deployment
+- CI/CD
+- Documentation
+- Handoff to another developer
+- Production readiness
+
+## Operational Goal
+
+A feature is not ready just because code exists.
+
+A feature is ready when another engineer can understand, run, test, review, and safely deploy it.
+
+## Required Operational Sections
+
+Update or create documentation with:
+
+1. What changed
+2. Why it changed
+3. How to run locally
+4. How to test
+5. How to validate gates
+6. How to rollback
+7. Known risks
+8. Open questions
+9. Demo script
+
+## PR Summary Template
+
+```md
+# PR Summary
+
+## Business Intent
+
+## What Changed
+
+## Specs
+
+- Business AST:
+- Context Manifest:
+- Implementation Plan:
+- Tasks:
+
+## Validation
+
+- AST Gate:
+- Context Gate:
+- Build Gate:
+- Security Gate:
+- Reviewer:
+
+## Commands Run
+
+```bash
+# paste commands here
+```
+
+## Risks
+
+## Rollback Plan
+
+## Demo Steps
+```
+
+## Demo Rules
+
+For demos, explain the factory flow, not just the final code.
+
+Recommended demo script:
+
+```text
+1. Show the human intent.
+2. Show Business AST.
+3. Show Context Manifest.
+4. Show Gates.
+5. Show Tasks.
+6. Show Builder implementation.
+7. Show Tests.
+8. Show Review Report.
+9. Run app or test.
+10. Explain what was deterministic vs probabilistic.
+```
+
+## Final Operational Response Format
+
+```md
+## Operational Agent Summary
+
+### Ready for Demo?
+
+Yes / No
+
+### Ready for PR?
+
+Yes / No
+
+### Commands to Run
+
+### Demo Script
+
+### Risks
+```

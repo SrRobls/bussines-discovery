@@ -1,0 +1,41 @@
+metadata:
+  artifact: "Business AST"
+  version: "0.2.0"
+  status: "approved"
+  description: "Ampliación MVP — más resultados, reseñas, búsqueda por mapa"
+
+feature:
+  id: "FEATURE-002"
+  name: "Discovery ampliado"
+  summary: "Paginación Google, reseñas exportables, delimitación de zona en mapa"
+
+rules:
+  - id: "BR-010"
+    description: "Text Search debe solicitar hasta 60 resultados (paginación Google, 20 por página)."
+    priority: "must"
+  - id: "BR-011"
+    description: "Cada negocio guardado debe incluir reseñas de Google cuando la API las entregue (Place Details)."
+    priority: "must"
+  - id: "BR-012"
+    description: "Export CSV siempre incluye columna reviews (texto agregado de comentarios)."
+    priority: "must"
+  - id: "BR-013"
+    description: "El usuario puede dibujar un polígono en mapa; búsqueda opcional por nicho dentro del área."
+    priority: "must"
+  - id: "BR-014"
+    description: "Sin nicho en modo mapa, buscar negocios genéricos dentro del polígono."
+    priority: "should"
+
+acceptance_criteria:
+  - id: "AC-010"
+    given: "nicho y zona válidos"
+    when: "busco negocios"
+    then: "puedo recibir más de 20 resultados si Google los tiene (hasta 60)"
+  - id: "AC-011"
+    given: "negocios guardados con reseñas"
+    when: "exporto CSV"
+    then: "el CSV incluye comentarios/reseñas"
+  - id: "AC-012"
+    given: "polígono dibujado en el mapa"
+    when: "busco con o sin nicho"
+    then: "solo aparecen negocios dentro del polígono"

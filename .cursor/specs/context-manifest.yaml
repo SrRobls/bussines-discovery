@@ -1,0 +1,175 @@
+metadata:
+  artifact: "Context Manifest"
+  version: "0.1.0"
+  status: "draft"
+  owner: "Architect Agent"
+  last_updated_by: "Architect Agent"
+  description: >
+    Technical context required for Builder Agents.
+    This file constrains implementation and prevents architecture drift.
+
+project:
+  name: ""
+  description: ""
+  repository_type: "single-service"
+  primary_language: ""
+  framework: ""
+  package_manager: ""
+  runtime: ""
+
+repository:
+  root_structure:
+    - path: "src/"
+      purpose: ""
+    - path: "tests/"
+      purpose: ""
+  important_files:
+    - path: ""
+      purpose: ""
+
+architecture:
+  style: ""
+  principles:
+    - "Keep business logic separated from transport concerns."
+    - "Prefer existing repository patterns."
+    - "Keep changes minimal and traceable."
+  layers:
+    - name: "domain"
+      responsibility: ""
+    - name: "application"
+      responsibility: ""
+    - name: "infrastructure"
+      responsibility: ""
+    - name: "interface"
+      responsibility: ""
+
+modules:
+  impacted:
+    - name: ""
+      path: ""
+      reason: ""
+  not_impacted:
+    - name: ""
+      path: ""
+      reason: ""
+
+domain:
+  entities:
+    - name: ""
+      responsibility: ""
+  value_objects:
+    - name: ""
+      responsibility: ""
+  use_cases:
+    - name: ""
+      responsibility: ""
+
+integration_points:
+  inbound:
+    - type: "api"
+      name: ""
+      path: ""
+      contract: ""
+  outbound:
+    - type: "service"
+      name: ""
+      contract: ""
+      failure_behavior: ""
+
+data:
+  persistence_required: false
+  stores:
+    - name: ""
+      type: ""
+      tables_or_collections:
+        - ""
+  migrations_required: false
+  data_sensitivity:
+    contains_pii: false
+    notes: ""
+
+api_contracts:
+  endpoints:
+    - method: ""
+      path: ""
+      request: ""
+      response: ""
+      auth_required: true
+
+commands:
+  install: ""
+  dev: ""
+  build: ""
+  lint: ""
+  test: ""
+  test_unit: ""
+  test_integration: ""
+
+testing:
+  framework: ""
+  required:
+    - "unit"
+  minimum_cases:
+    - "happy path"
+    - "main failure path"
+    - "edge case from Business AST"
+
+security:
+  authentication_required: true
+  authorization_required: true
+  input_validation_required: true
+  logging_rules:
+    - "Do not log secrets."
+    - "Do not log sensitive personal data."
+  forbidden:
+    - "Hardcoded credentials"
+    - "Auth bypass"
+    - "Unsafe eval"
+    - "Silent permission escalation"
+
+observability:
+  logs:
+    required: true
+    notes: ""
+  metrics:
+    required: false
+    notes: ""
+  tracing:
+    required: false
+    notes: ""
+
+constraints:
+  - id: "CONSTRAINT-001"
+    description: "Do not introduce new dependencies without explicit approval."
+  - id: "CONSTRAINT-002"
+    description: "Do not modify unrelated modules."
+  - id: "CONSTRAINT-003"
+    description: "Do not change public contracts unless Business AST requires it."
+
+dependencies:
+  allowed:
+    - name: ""
+      reason: ""
+  forbidden:
+    - name: ""
+      reason: ""
+
+forbidden_changes:
+  - "Do not rewrite the whole project."
+  - "Do not change unrelated formatting."
+  - "Do not remove existing tests."
+  - "Do not weaken security checks."
+
+builder_instructions:
+  general:
+    - "Read Business AST before coding."
+    - "Use this Context Manifest as the technical contract."
+    - "Implement one task at a time."
+    - "Add or update tests."
+    - "Update validation report after changes."
+  handoff_to_review:
+    required_summary:
+      - "files changed"
+      - "tests added"
+      - "commands run"
+      - "known risks"
